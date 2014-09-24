@@ -80,10 +80,12 @@
             light2.position.set( 0, 0.3, -1 ).normalize();
             scene.add( light2 );
 
-            // model
+            // pre-load models
             loadGarment('g1');
             loadGarment('g2');
             loadGarment('g3');
+            loadGarment('pant1');
+            loadGarment('skirt1');
 
             loader.load( 'data/female1/model.obj', 'data/female1/model.mtl', function ( object ) {
                 object.position.y = - 100;
@@ -129,6 +131,9 @@
 <img src="image/g1.jpg" width="50" height="50" onclick="setGarment('g1');" style="cursor: pointer;">
 <img src="image/g2.jpg" width="50" height="50" onclick="setGarment('g2');" style="cursor: pointer;">
 <img src="image/g3.jpg" width="50" height="50" onclick="setGarment('g3');" style="cursor: pointer;">
+
+<img src="image/g3.jpg" width="50" height="50" onclick="setGarment('pant1');" style="cursor: pointer;">
+<img src="image/g3.jpg" width="50" height="50" onclick="setGarment('skirt1');" style="cursor: pointer;">
 <script>
     init();
     render();

@@ -1,0 +1,37 @@
+# MTL Exporter v1.0 by Seungwoo Oh at CLO - Virtual Fashion Inc.
+newmtl Material1780
+Ka 0.847059 0.847059 0.847059
+Kd 0.913725 0.913725 0.913725
+Ks 0.000000 0.000000 0.000000
+Ns 10.000000
+illum 2
+d 1.000000
+map_Ka S25148_color.jpg
+map_Kd S25148_color.jpg
+newmtl Material1839
+Ka 0.847059 0.847059 0.847059
+Kd 0.913725 0.913725 0.913725
+Ks 0.000000 0.000000 0.000000
+Ns 10.000000
+illum 2
+d 1.000000
+map_Ka S25148_color.jpg
+map_Kd S25148_color.jpg
+newmtl Material1824
+Ka 0.847059 0.847059 0.847059
+Kd 0.913725 0.913725 0.913725
+Ks 0.000000 0.000000 0.000000
+Ns 10.000000
+illum 2
+d 1.000000
+map_Ka wrinkle_01.png
+map_Kd wrinkle_01.png
+newmtl Material1797
+Ka 0.400000 0.400000 0.400000
+Kd 0.698039 0.698039 0.698039
+Ks 0.043137 0.043137 0.043137
+Ns 10.000000
+illum 2
+d 1.000000
+map_Ka Kint_Black.png
+map_Kd Kint_Black.png
