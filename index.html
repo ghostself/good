@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Demo</title>
+    <style>canvas {
+        width: 100%;
+        height: 100%
+    }</style>
+    <script src="lib/three.min.js"></script>
+    <script src="lib/DDSLoader.js"></script>
+    <script src="lib/MTLLoader.js"></script>
+    <script src="lib/OBJMTLLoader.js"></script>
+    <script>
+        var container, stats;
+        var camera, scene, renderer;
+        var mouseX = 0, mouseY = 0, lastMouseX = 0;;
+        var mouseDown = false;
+        var theta = Math.PI / 2, delta = 0;
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+        var loader = new THREE.OBJMTLLoader();
+        THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
+        var model, garment;
+        var garments = {};
+
+        function loadGarment(name) {
+            if (!garments[name]) {
+                loader.load( 'data/' + name + '/model.obj', 'data/' + name + '/model.mtl', function ( object ) {
+                    object.position.y = - 100;
+                    garments[name] = object;
+                    if (name == 'g1')
+                        setGarment('g1');
+                });
+            }
+        }
+
+        function setGarment(name) {
+            scene.remove(garment);
+            garment = garments[name];
+            scene.add(garment);
+        }
+
+        function onDocumentMouseMove(event) {
+            mouseX = ( event.clientX - windowHalfX ) / 2;
+            mouseY = ( event.clientY - windowHalfY ) / 2;
+            if (mouseDown) {
+                delta = (event.clientX - lastMouseX) / windowHalfX * Math.PI;
+            }
+        }
+
+        function onDocumentMouseDown(event) {
+            lastMouseX = event.clientX;
+            mouseDown = true;
+        }
+
+        function onDocumentMouseUp(event) {
+            mouseDown = false;
+            theta += delta;
+            delta = 0;
+        }
+
+        function init() {
+            container = document.createElement( 'div' );
+            document.body.appendChild( container );
+
+            camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 2000 );
+            camera.position.z = 300;
+
+            // scene
+            scene = new THREE.Scene();
+
+            var ambient = new THREE.AmbientLight( 0x444444 );
+            scene.add( ambient );
+
+            var light1 = new THREE.DirectionalLight( 0xffeedd );
+            light1.position.set( 0, 0.3, 1 ).normalize();
+            scene.add( light1 );
+
+            var light2 = new THREE.DirectionalLight( 0xffeedd );
+            light2.position.set( 0, 0.3, -1 ).normalize();
+            scene.add( light2 );
+
+            // model
+            loadGarment('g1');
+            loadGarment('g2');
+            loadGarment('g3');
+
+            loader.load( 'data/female1/model.obj', 'data/female1/model.mtl', function ( object ) {
+                object.position.y = - 100;
+                model = object;
+                scene.add( object );
+            } );
+
+            renderer = new THREE.WebGLRenderer();
+            renderer.setSize( window.innerWidth, window.innerHeight );
+            container.appendChild( renderer.domElement );
+
+            container.addEventListener( 'mousemove', onDocumentMouseMove, false );
+            container.addEventListener( 'mousedown', onDocumentMouseDown, false );
+            container.addEventListener( 'mouseup', onDocumentMouseUp, false );
+            window.addEventListener( 'resize', onWindowResize, false );
+
+        }
+
+        function onWindowResize() {
+
+            windowHalfX = window.innerWidth / 2;
+            windowHalfY = window.innerHeight / 2;
+
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+
+            renderer.setSize( window.innerWidth, window.innerHeight );
+
+        }
+
+        var render = function () {
+            requestAnimationFrame(render);
+            renderer.render(scene, camera);
+
+            camera.position.x = Math.cos(theta + delta) * 300;
+            camera.position.z = Math.sin(theta + delta) * 300;
+
+            camera.lookAt( scene.position );
+        };
+    </script>
+</head>
+<body>
+<img src="image/g1.jpg" width="50" height="50" onclick="setGarment('g1');" style="cursor: pointer;">
+<img src="image/g2.jpg" width="50" height="50" onclick="setGarment('g2');" style="cursor: pointer;">
+<img src="image/g3.jpg" width="50" height="50" onclick="setGarment('g3');" style="cursor: pointer;">
+<script>
+    init();
+    render();
+</script>
+</body>
+</html>
