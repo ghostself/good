@@ -1,4 +1,4 @@
 good
 ====
 
-good things
+good good study, day day up.
