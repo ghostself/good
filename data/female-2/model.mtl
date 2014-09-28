@@ -1,0 +1,211 @@
+# MTL Exporter v1.0 by Seungwoo Oh at CLO - Virtual Fashion Inc.
+newmtl W_hair
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.250000 0.250000 0.250000
+Ns 7.000000
+illum 2
+d 1.000000
+map_Kd woman_hair.png
+map_d woman_hair.png
+map_Ka woman_hair.png
+newmtl W_hair_bend
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.001000
+Ks 0.000000 0.000000 0.000000
+Ns 102.000000
+illum 2
+d 1.000000
+newmtl W_hair_cap
+Ka 0.058811 0.058811 0.058811
+Kd 1.000000 1.000000 1.000000
+Ks 0.050000 0.050000 0.050000
+Ns 6.000000
+illum 2
+d 1.000000
+map_Kd cap.jpg
+map_Ka cap.jpg
+newmtl W_face_hair
+Ka 0.400000 0.360000 0.340000
+Kd 1.000000 1.000000 1.000000
+Ks 0.120000 0.120000 0.120000
+Ns 7.000000
+illum 2
+d 1.000000
+map_Kd W_face_west.jpg
+map_Ka W_face_west.jpg
+newmtl W_eye
+Ka 0.231000 0.231000 0.231000
+Kd 1.000000 1.000000 1.000000
+Ks 0.000000 0.000000 0.000000
+Ns 100.000000
+illum 2
+d 1.000000
+map_Kd eye_2.jpg
+map_Ka eye_2.jpg
+newmtl W_eye_specular_Light
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 2.000000
+illum 2
+d 1.000000
+map_d eye_light.png
+newmtl W_eyelashes
+Ka 0.000000 0.000000 0.000000
+Kd 0.105592 0.077195 0.019333
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+newmtl W_body
+Ka 0.400000 0.360000 0.340000
+Kd 1.000000 1.000000 1.000000
+Ks 0.120000 0.120000 0.120000
+Ns 7.000000
+illum 2
+d 1.000000
+map_Kd W_body_west_lingerie.jpg
+map_Ka W_body_west_lingerie.jpg
+newmtl W_face
+Ka 0.400000 0.360000 0.340000
+Kd 1.000000 1.000000 1.000000
+Ks 0.120000 0.120000 0.120000
+Ns 7.000000
+illum 2
+d 1.000000
+map_Kd W_face_west.jpg
+map_Ka W_face_west.jpg
+newmtl W_hand_leg
+Ka 0.400000 0.360000 0.340000
+Kd 1.000000 1.000000 1.000000
+Ks 0.120000 0.120000 0.120000
+Ns 7.000000
+illum 2
+d 1.000000
+map_Kd W_leg_hand_west.jpg
+map_Ka W_leg_hand_west.jpg
+newmtl dummy
+Ka 0.000000 0.000000 0.000000
+Kd 0.400000 0.400000 0.400000
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+map_d transparency.png
+newmtl W_Shoes_front_heel
+Ka 0.231000 0.231000 0.231000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 2.000000
+illum 2
+d 1.000000
+map_Kd skin_beige_new.jpg
+map_Ks skin_s.jpg
+map_Ka skin_beige_new.jpg
+newmtl W_Shoes_skin
+Ka 0.231000 0.231000 0.231000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 2.000000
+illum 2
+d 1.000000
+map_Kd skin_beige_new.jpg
+map_Ks skin_s.jpg
+map_Ka skin_beige_new.jpg
+newmtl W_Shoes_sole
+Ka 0.231000 0.231000 0.231000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 2.000000
+illum 2
+d 1.000000
+map_Kd skin_nudes.jpg
+map_Ks skin_s.jpg
+map_Ka skin_nudes.jpg
+newmtl W_Shoes_red
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+newmtl Shoes_heel_rubber
+Ka 0.000000 0.000000 0.000000
+Kd 0.626000 0.406900 0.000000
+Ks 0.489204 0.489204 0.489204
+Ns 50.000000
+illum 2
+d 1.000000
+newmtl W_Shoes_outsole
+Ka 0.231000 0.231000 0.231000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 2.000000
+illum 2
+d 1.000000
+map_Kd skin_nudes.jpg
+map_Ks skin_s.jpg
+map_Ka skin_nudes.jpg
+newmtl dummy
+Ka 0.000000 0.000000 0.000000
+Kd 0.400000 0.400000 0.400000
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+map_d transparency.png
+newmtl W_Shoes_front_heel
+Ka 0.231000 0.231000 0.231000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 2.000000
+illum 2
+d 1.000000
+map_Kd skin_beige_new.jpg
+map_Ks skin_s.jpg
+map_Ka skin_beige_new.jpg
+newmtl W_Shoes_skin
+Ka 0.231000 0.231000 0.231000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 2.000000
+illum 2
+d 1.000000
+map_Kd skin_beige_new.jpg
+map_Ks skin_s.jpg
+map_Ka skin_beige_new.jpg
+newmtl W_Shoes_sole
+Ka 0.231000 0.231000 0.231000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 2.000000
+illum 2
+d 1.000000
+map_Kd skin_nudes.jpg
+map_Ks skin_s.jpg
+map_Ka skin_nudes.jpg
+newmtl W_Shoes_red
+Ka 0.000000 0.000000 0.000000
+Kd 0.800000 0.000000 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+newmtl Shoes_heel_rubber
+Ka 0.000000 0.000000 0.000000
+Kd 0.626000 0.406900 0.000000
+Ks 0.489204 0.489204 0.489204
+Ns 50.000000
+illum 2
+d 1.000000
+newmtl W_Shoes_outsole
+Ka 0.231000 0.231000 0.231000
+Kd 1.000000 1.000000 1.000000
+Ks 1.000000 1.000000 1.000000
+Ns 2.000000
+illum 2
+d 1.000000
+map_Kd skin_nudes.jpg
+map_Ks skin_s.jpg
+map_Ka skin_nudes.jpg

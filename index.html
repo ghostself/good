@@ -21,21 +21,56 @@
         var loader = new THREE.OBJMTLLoader();
         THREE.Loader.Handlers.add( /\.dds$/i, new THREE.DDSLoader() );
         var model, garment;
+        var pose = 1, modelName, garmentName;
         var garments = {};
+        var models = {};
 
-        function loadGarment(name) {
+        function loadGarment(g) {
+            garmentName = g;
+            var name = g + '-' + pose;
             if (!garments[name]) {
-                loader.load( 'data/' + name + '/model.obj', 'data/' + name + '/model.mtl', function ( object ) {
+                var path =  'data/' + name;
+                console.log('loading', path);
+                loader.load( path + '/model.obj', path + '/model.mtl', function ( object ) {
                     object.position.y = - 100;
                     garments[name] = object;
-                    if (name == 'g1')
-                        setGarment('g1');
+                    console.log(name, 'loaded.');
+                    scene.remove(garment);
+                    garment = garments[name];
+                    scene.add(garment);
                 });
+            } else {
+                scene.remove(garment);
+                garment = garments[name];
+                scene.add(garment);
+            }
+        }
+
+        function loadModel(m) {
+            modelName = m;
+            var name = m + '-' + pose;
+            if (!models[name]) {
+                var path =  'data/' + name;
+                console.log('loading', path);
+                loader.load( path + '/model.obj', path + '/model.mtl', function ( object ) {
+                    object.position.y = - 100;
+                    models[name] = object;
+                    console.log(name, 'loaded.');
+                    scene.remove(model);
+                    model = models[name];
+                    scene.add(model);
+                });
+            } else {
+                scene.remove(model);
+                model = models[name];
+                scene.add(model);
             }
         }
 
         function setGarment(name) {
             scene.remove(garment);
+            scene.remove(upGarment);
+            scene.remove(downGarment);
             garment = garments[name];
             scene.add(garment);
         }
@@ -57,6 +92,15 @@
             mouseDown = false;
             theta += delta;
             delta = 0;
+        }
+
+        function setPose(value) {
+            pose = value;
+            scene.remove(model);
+            scene.remove(garment);
+            loadModel(modelName);
+            loadGarment(garmentName);
+            console.log('set pose to', pose);
         }
 
         function init() {
@@ -81,17 +125,9 @@
             scene.add( light2 );
 
             // pre-load models
-            loadGarment('g1');
-            loadGarment('g2');
-            loadGarment('g3');
-            loadGarment('pant1');
-            loadGarment('skirt1');
 
-            loader.load( 'data/female1/model.obj', 'data/female1/model.mtl', function ( object ) {
-                object.position.y = - 100;
-                model = object;
-                scene.add( object );
-            } );
+            loadModel("female");
+            loadGarment('g1');
 
             renderer = new THREE.WebGLRenderer();
             renderer.setSize( window.innerWidth, window.innerHeight );
@@ -128,12 +164,15 @@
     </script>
 </head>
 <body>
-<img src="image/g1.jpg" width="50" height="50" onclick="setGarment('g1');" style="cursor: pointer;">
-<img src="image/g2.jpg" width="50" height="50" onclick="setGarment('g2');" style="cursor: pointer;">
-<img src="image/g3.jpg" width="50" height="50" onclick="setGarment('g3');" style="cursor: pointer;">
+Pose:
+<img src="image/pose1.png" style="cursor: pointer;" onclick="setPose(1)">
+<img src="image/pose2.png" style="cursor: pointer;" onclick="setPose(2)">
 
-<img src="image/g3.jpg" width="50" height="50" onclick="setGarment('pant1');" style="cursor: pointer;">
-<img src="image/g3.jpg" width="50" height="50" onclick="setGarment('skirt1');" style="cursor: pointer;">
+Dress:
+<img src="image/g1.jpg" width="50" height="50" onclick="loadGarment('g1');" style="cursor: pointer;">
+<img src="image/g2.jpg" width="50" height="50" onclick="loadGarment('g2');" style="cursor: pointer;">
+<img src="image/g3.jpg" width="50" height="50" onclick="loadGarment('g3');" style="cursor: pointer;">
+
 <script>
     init();
     render();
