@@ -16,6 +16,7 @@
         var mouseX = 0, mouseY = 0, lastMouseX = 0;;
         var mouseDown = false;
         var theta = Math.PI / 2, delta = 0;
+        var distance = 300;
         var windowHalfX = window.innerWidth / 2;
         var windowHalfY = window.innerHeight / 2;
         var loader = new THREE.OBJMTLLoader();
@@ -94,6 +95,10 @@
             delta = 0;
         }
 
+        function onDocumentMouseWheel(event) {
+            distance += event.wheelDelta * 0.1;
+        }
+
         function setPose(value) {
             pose = value;
             scene.remove(model);
@@ -136,6 +141,7 @@
             container.addEventListener( 'mousemove', onDocumentMouseMove, false );
             container.addEventListener( 'mousedown', onDocumentMouseDown, false );
             container.addEventListener( 'mouseup', onDocumentMouseUp, false );
+            container.addEventListener( 'mousewheel', onDocumentMouseWheel, false );
             window.addEventListener( 'resize', onWindowResize, false );
 
         }
@@ -156,8 +162,8 @@
             requestAnimationFrame(render);
             renderer.render(scene, camera);
 
-            camera.position.x = Math.cos(theta + delta) * 300;
-            camera.position.z = Math.sin(theta + delta) * 300;
+            camera.position.x = Math.cos(theta + delta) * distance;
+            camera.position.z = Math.sin(theta + delta) * distance;
 
             camera.lookAt( scene.position );
         };
