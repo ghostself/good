@@ -1,0 +1,55 @@
+# MTL Exporter v1.0 by Seungwoo Oh at CLO - Virtual Fashion Inc.
+newmtl Material4186
+Ka 0.847059 0.847059 0.847059
+Kd 0.913725 0.913725 0.913725
+Ks 0.113725 0.113725 0.113725
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka gaberdine_black_cotton.jpg
+map_Kd gaberdine_black_cotton.jpg
+newmtl Material8651
+Ka 0.043183 0.694256 0.000000
+Kd 0.046582 0.748897 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka Basic_Overlock.png
+map_Kd Basic_Overlock.png
+newmtl Material8572
+Ka 0.694256 0.694256 0.694256
+Kd 0.748897 0.748897 0.748897
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka light_blue_jergey.jpg
+map_Kd light_blue_jergey.jpg
+newmtl Material8589
+Ka 0.694256 0.694256 0.694256
+Kd 0.748897 0.748897 0.748897
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka light_black_jergey.jpg
+map_Kd light_black_jergey.jpg
+newmtl Material8604
+Ka 0.694256 0.694256 0.694256
+Kd 0.748897 0.748897 0.748897
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka white jerge.png
+map_Kd white jerge.png
+newmtl Material8644
+Ka 0.043183 0.694256 0.000000
+Kd 0.046582 0.748897 0.000000
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka Basic_Overlock.png
+map_Kd Basic_Overlock.png

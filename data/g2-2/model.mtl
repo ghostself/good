@@ -1,0 +1,46 @@
+# MTL Exporter v1.0 by Seungwoo Oh at CLO - Virtual Fashion Inc.
+newmtl Material4186
+Ka 0.847059 0.847059 0.847059
+Kd 0.913725 0.913725 0.913725
+Ks 0.113725 0.113725 0.113725
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka gaberdine_black_cotton.jpg
+map_Kd gaberdine_black_cotton.jpg
+newmtl Material5573
+Ka 0.372042 0.112941 0.059792
+Kd 0.401323 0.121830 0.064498
+Ks 0.600000 0.600000 0.600000
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka c_broadcloth_Hot Pink_2.jpg
+map_Kd c_broadcloth_Hot Pink_2.jpg
+newmtl Material5509
+Ka 0.428512 0.534810 0.382007
+Kd 0.462238 0.576901 0.412072
+Ks 0.000000 0.000000 0.000000
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka Jersey_Green.png
+map_Kd Jersey_Green.png
+newmtl Material5552
+Ka 0.372042 0.112941 0.059792
+Kd 0.401323 0.121830 0.064498
+Ks 0.600000 0.600000 0.600000
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka c_broadcloth_Hot Pink_2.jpg
+map_Kd c_broadcloth_Hot Pink_2.jpg
+newmtl Material5544
+Ka 0.372042 0.112941 0.059792
+Kd 0.401323 0.121830 0.064498
+Ks 0.600000 0.600000 0.600000
+Ns 5.000000
+illum 2
+d 1.000000
+map_Ka c_broadcloth_Hot Pink_2.jpg
+map_Kd c_broadcloth_Hot Pink_2.jpg
